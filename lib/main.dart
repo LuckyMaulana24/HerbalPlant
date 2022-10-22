@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Herbal Plant Apps',
+      title: 'Herbal Plant Apps 1',
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Herbal Plant'),
