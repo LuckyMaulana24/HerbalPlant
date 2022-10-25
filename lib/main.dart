@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:herbal_plant/pages/sign_in_page.dart';
+import 'package:herbal_plant/pages/splash_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,14 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( 
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Herbal Plant Apps 1',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Herbal Plant'),
-        ),
-      ),
+      routes: {
+        '/': (context) => const SplashPage(),
+        '/sign-in': (context) => const SignInPage(),
+      },
     );
   }
 }
