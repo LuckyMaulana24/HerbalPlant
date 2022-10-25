@@ -1,4 +1,4 @@
-# herbal_plant
+# Herbal Plant
 
 A new Flutter project.
 
