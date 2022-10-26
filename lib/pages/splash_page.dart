@@ -43,8 +43,10 @@ class _SplashPageState extends State<SplashPage> {
             ),
             Text(
               'Herbal Plant',
-              style:
-                  greenDarkTextStyle.copyWith(fontSize: 24, fontWeight: bold),
+              style: greenDarkTextStyle.copyWith(
+                fontSize: 24,
+                fontWeight: bold,
+              ),
             ),
             Text(
               'many benefits',

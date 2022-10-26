@@ -13,6 +13,8 @@ class SignInPage extends StatelessWidget {
           children: [
             Image.asset('assets/background.png'),
             title(),
+            emailInput(),
+            passwordInput(),
           ],
         ),
       ),
@@ -26,7 +28,7 @@ class SignInPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Login Your\nAccount',
+            'Login your\naccount',
             style: greenTextStyle.copyWith(
               fontSize: 24,
               fontWeight: bold,
@@ -54,6 +56,54 @@ class SignInPage extends StatelessWidget {
               ),
             ],
           )
+        ],
+      ),
+    );
+  }
+
+  Widget emailInput() {
+    return Container(
+      margin: const EdgeInsets.only(top: 30),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: kGreyColor,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: TextFormField(
+        decoration: InputDecoration.collapsed(
+          hintText: 'Email',
+          hintStyle: greenDarkTextStyle.copyWith(
+            fontSize: 16,
+            fontWeight: semibold,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget passwordInput() {
+    return Container(
+      margin: const EdgeInsets.only(top: 30),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: kGreyColor,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: TextFormField(
+              obscureText: true,
+              decoration: InputDecoration.collapsed(
+                hintText: 'Password',
+                hintStyle: greenDarkTextStyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: semibold,
+                ),
+              ),
+            ),
+          ),
+          const Icon(Icons.visibility_outlined)
         ],
       ),
     );
