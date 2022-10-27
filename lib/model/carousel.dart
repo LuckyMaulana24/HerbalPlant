@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:herbal_plant/theme.dart';
 
 class Carousel extends StatelessWidget {
   const Carousel({Key? key}) : super(key: key);
@@ -36,29 +37,24 @@ class Carousel extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
+                children: [
                   Padding(
-                    padding: EdgeInsets.all(2.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Text(
                       'Lidah Buaya',
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xffF8FAF8),
-                        fontFamily: 'Rowdies',
+                      style: whiteTextStyle.copyWith(
+                        fontSize: 20,
+                        fontWeight: bold,
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(2.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Text(
                       'Aloe Vera L',
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontFamily: 'Rowdies',
-                        fontSize: 15,
-                        color: Color(0xffF8FAF8),
+                      style: whiteTextStyle.copyWith(
+                        fontSize: 16,
+                        fontWeight: reguler,
                       ),
                     ),
                   ),
@@ -86,29 +82,24 @@ class Carousel extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
+                children: [
                   Padding(
-                    padding: EdgeInsets.all(2.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Text(
                       'Bunga Matahari',
-                      style: TextStyle(
-                        fontFamily: 'Rowdies',
-                        decoration: TextDecoration.none,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xffF8FAF8),
+                      style: whiteTextStyle.copyWith(
+                        fontSize: 20,
+                        fontWeight: bold,
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(2.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Text(
                       'Haliantus Anuus L',
-                      style: TextStyle(
-                        fontFamily: 'Rowdies',
-                        decoration: TextDecoration.none,
-                        fontSize: 15,
-                        color: Color(0xffF8FAF8),
+                      style: whiteTextStyle.copyWith(
+                        fontSize: 16,
+                        fontWeight: reguler,
                       ),
                     ),
                   ),
@@ -136,29 +127,24 @@ class Carousel extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
+                children: [
                   Padding(
-                    padding: EdgeInsets.all(2.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Text(
                       'Kumis Kucing',
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontFamily: 'Rowdies',
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xffF8FAF8),
+                      style: whiteTextStyle.copyWith(
+                        fontSize: 20,
+                        fontWeight: bold,
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(2.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Text(
                       'Orthosiphon Aristatus',
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontFamily: 'Rowdies',
-                        fontSize: 15,
-                        color: Color(0xffF8FAF8),
+                      style: whiteTextStyle.copyWith(
+                        fontSize: 16,
+                        fontWeight: reguler,
                       ),
                     ),
                   ),
@@ -186,29 +172,24 @@ class Carousel extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
+                children: [
                   Padding(
-                    padding: EdgeInsets.all(2.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Text(
                       'Sirih',
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontFamily: 'Rowdies',
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xffF8FAF8),
+                      style: whiteTextStyle.copyWith(
+                        fontSize: 20,
+                        fontWeight: bold,
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(2.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Text(
                       'Piper Betle L',
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontFamily: 'Rowdies',
-                        fontSize: 15,
-                        color: Color(0xffF8FAF8),
+                      style: whiteTextStyle.copyWith(
+                        fontSize: 16,
+                        fontWeight: reguler,
                       ),
                     ),
                   ),

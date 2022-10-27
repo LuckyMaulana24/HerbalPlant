@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:herbal_plant/model/carousel.dart';
+import 'package:herbal_plant/theme.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -36,7 +37,7 @@ class information3 extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-          color: const Color(0xff0C3B2E),
+          color: kGreenColor,
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(10),
         ),
@@ -55,27 +56,24 @@ class information3 extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       'Tanaman Obat V Obat Kimia',
-                      style: TextStyle(
-                        fontFamily: 'Rowdies',
+                      style: whiteTextStyle.copyWith(
                         fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xffF8FAF8),
+                        fontWeight: bold,
                       ),
                     ),
                     const SizedBox(height: 10),
                     Expanded(
                       child: Center(
                         child: Container(
-                          child: const SingleChildScrollView(
+                          child: SingleChildScrollView(
                             scrollDirection: Axis.vertical,
                             child: Text(
                               'Tumbuhan obat mempunyai beberapa kelebihan dibandingkan dengan obat kimia modern, diantaranya memiliki harga yang lebih terjangkau dan memiliki efek samping yang relatif lebih sedikit bahkan ada yang sama sekali tidak.',
-                              style: TextStyle(
-                                fontFamily: 'Rowdies',
+                              style: whiteTextStyle.copyWith(
                                 fontSize: 15,
-                                color: Color(0xffF8FAF8),
+                                fontWeight: reguler,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 10,
@@ -106,7 +104,7 @@ class information2 extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-          color: const Color(0xff0C3B2E),
+          color: kGreenColor,
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(10),
         ),
@@ -122,27 +120,24 @@ class information2 extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       'Manfaat tanaman herbal',
-                      style: TextStyle(
-                        fontFamily: 'Rowdies',
+                      style: whiteTextStyle.copyWith(
                         fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xffF8FAF8),
+                        fontWeight: bold,
                       ),
                     ),
                     const SizedBox(height: 10),
                     Expanded(
                       child: Center(
                         child: Container(
-                          child: const SingleChildScrollView(
+                          child: SingleChildScrollView(
                             scrollDirection: Axis.vertical,
                             child: Text(
                               'Journal Medical Science menjelaskan salah satu manfaat tanaman obat adalah membantu memperbaiki metabolisme tubuh, sehingga kita tidak mudah sakit.',
-                              style: TextStyle(
-                                fontFamily: 'Rowdies',
-                                fontSize: 16,
-                                color: Color(0xffF8FAF8),
+                              style: whiteTextStyle.copyWith(
+                                fontSize: 15,
+                                fontWeight: reguler,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 10,
@@ -178,7 +173,7 @@ class information1 extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-          color: const Color(0xff0C3B2E),
+          color: kGreenColor,
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(10),
         ),
@@ -197,28 +192,25 @@ class information1 extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       'Apa itu tanaman herbal?',
-                      style: TextStyle(
-                        fontFamily: 'Rowdies',
+                      style: whiteTextStyle.copyWith(
                         fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xffF8FAF8),
+                        fontWeight: bold,
                       ),
                     ),
                     const SizedBox(height: 10),
                     Expanded(
                       child: Center(
                         child: Container(
-                          child: const SingleChildScrollView(
+                          child: SingleChildScrollView(
                             scrollDirection: Axis.vertical,
                             child: Text(
                               'Tanaman herbal merupakan jenis-jenis tanaman yang memiliki fungsi. Tanaman herbal tergolong rempah-rempah dan tanaman buah yang dapat digunakan untuk mengobati berbagai macam penyakit.',
                               maxLines: 10,
-                              style: TextStyle(
-                                fontFamily: 'Rowdies',
-                                fontSize: 16,
-                                color: Color(0xffF8FAF8),
+                              style: whiteTextStyle.copyWith(
+                                fontSize: 15,
+                                fontWeight: reguler,
                               ),
                               textAlign: TextAlign.center,
                               overflow: TextOverflow.ellipsis,
