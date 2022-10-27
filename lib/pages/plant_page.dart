@@ -11,38 +11,9 @@ class PlantPage extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
+          title(),
           Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          '//Herbs Plant',
-                          style: TextStyle(
-                            decoration: TextDecoration.none,
-                            fontFamily: 'Rowdies',
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xff0C3B2E),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(15),
             child: GridView.count(
               crossAxisCount: 2,
               padding: const EdgeInsets.only(top: 5),
@@ -111,6 +82,69 @@ class PlantPage extends StatelessWidget {
                   ),
                 );
               }).toList(),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget title() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            margin: const EdgeInsets.only(top: 12),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Explore Your\nPlant Herbal',
+                  style: greenTextStyle.copyWith(
+                    fontSize: 24,
+                    fontWeight: bold,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      width: 87,
+                      height: 4,
+                      margin: const EdgeInsets.only(right: 6),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4),
+                          color: kGreenDarkColor),
+                    ),
+                    Container(
+                      width: 16,
+                      height: 4,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4),
+                          color: kGreenDarkColor),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: kGreenColor,
+              ),
+              shape: BoxShape.circle,
+            ),
+            child: IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.notifications,
+                color: kGreenColor,
+              ),
             ),
           ),
         ],
