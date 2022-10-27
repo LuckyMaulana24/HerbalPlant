@@ -31,14 +31,15 @@ var herbsPlantList = [
     cara:
         '''- Ambil 1-2 lembar (6-10 gr kering) akar genggam (3-5 gr) direbus dan diminum airnya 3 kali sehari
 - Ambil 9-15 g daun, rebus dengan 1/2 Liter air sisakan setengahnya diminum 3x sehari.''',
-    imageAsset: 'asset/images/andong.png',
+    imageAsset: 'assets/andong.png',
   ),
   HerbsPlant(
       nama: 'Awar-Awar',
       namalatin: 'Ficus Septica',
       deskripsi:
           'Awar-awar merupakan tumbuhan yang berasal dari keluarga Moraceae dan memiliki nama ilmiah yaitu Ficus Septica Burm. Awar-awar sudah menyebar luas ke India Timur Laut, Cina Selatan, Taiwan, Australia, wilayah Pasifik barat, hingga ke seluruh wilayah Malesia kecuali semenanjung Malaya. Tanaman ini memiliki berbagai sebutan lain seperti hauli, kauili, atau sio di Filipina dan omia, manibwohebwahe, atau bahuerueru di Papua Nugini.',
-      manfaat: '''1. Dapat Mengobati Borok (Abse/Ulcus Tropicum
+      manfaat:
+          '''1. Dapat Mengobati Borok (Abse/Ulcus Tropicum
 2. Obat untuk radang telinga''',
       kandungan:
           '''1. Senyawa flavanoid yang terdiri dari genistin dan kaempferitrin;
@@ -55,7 +56,7 @@ var herbsPlantList = [
       cara:
           '''- Ambil daunnya 1/2 lembar (5 gr) yang masih segar ditumbuk sampai lumat kemudian ditempelken pada bisul.
 - Getahnya dicampurgetah widari diteteskan di telinga''',
-      imageAsset: 'asset/images/awar.jpg'),
+      imageAsset: 'assets/awar.jpg'),
   HerbsPlant(
     nama: 'Bunga Matahari',
     namalatin: 'Haliantus Anuus L',
@@ -65,7 +66,7 @@ var herbsPlantList = [
         '1. Mengatasi Peradangan.\n2. Mengurangi resiko penyakit jantung.\n3. Mengontrol Diabetes',
     kandungan: '1. Kalori\n2. Vitamin seperti E dan B6\n3. Zat Besi',
     cara: '',
-    imageAsset: 'asset/images/matahari.png',
+    imageAsset: 'assets/matahari.png',
   ),
   HerbsPlant(
       nama: 'Bambu Kuning',
@@ -78,7 +79,7 @@ var herbsPlantList = [
       cara:
           '''- Ambil batang bambu secukupnya lalu bakar hingga keluar cairan, kemudian cairan tersebut digunakan untuk mengoles pada bekas luka
 - Ambil akarnya (10gr) direbus 3 gelas air sampai mendidih sisakan hingga 1/2nya, minum 3x sehari.''',
-      imageAsset: 'asset/images/bambu.png'),
+      imageAsset: 'assets/bambu.png'),
   HerbsPlant(
     nama: 'Sirih',
     namalatin: 'Piper Betle L',
@@ -86,16 +87,18 @@ var herbsPlantList = [
         'Sirih adalah tanaman asli Indonesia yang tumbuh merambat atau bersandar pada batang pohon lain. Sirih dikenal dalam masing-masing bahasa dengan nama yang khas, yaitu: suro, sireh, bido, base, dan amo. Sebagai budaya daun dan buahnya biasa dikunyah bersama gambir, pinang, tembakau dan kapur.',
     manfaat:
         'Untuk mengatasi keputihan, bau mulut dan badan, sakit mata(belekan)',
-    kandungan: '''Protein: 3 persen per 100 gram.
+    kandungan:
+        '''Protein: 3 persen per 100 gram.
 Iodin: 3,4 mcg per 100 gram.
 Sodium: 1,1-4,6% per 100 gram.
 Vitamin A: 1,9-2,9 mg per 100 gram.
 Vitamin B1: 13-70 mcg per 100 gram.
 Vitamin B2: 1,9-30 mcg per 100 gram.
 Asam nikotinat: 0,63-0,89 mg per 100 gram.''',
-    cara: '''- Daun Sirih direbus sampai mendidih setelah hangat lalu digunakan
+    cara:
+        '''- Daun Sirih direbus sampai mendidih setelah hangat lalu digunakan
 - Cebokan pada keputihan''',
-    imageAsset: 'asset/images/sirih.jpg',
+    imageAsset: 'assets/sirih.jpg',
   ),
   HerbsPlant(
     nama: 'Kumis Kucing',
@@ -106,7 +109,7 @@ Asam nikotinat: 0,63-0,89 mg per 100 gram.''',
         '1. Menyembuhkan Gangguan Ginjal dan Kandung Kemih\n2. Mengatasi Masalah Pernapasan\n3. Mengobati Peradangan dan Arthritis',
     kandungan: '1. Flavonoid\n2. Triterpenoid\n3. Fenolik',
     cara: '',
-    imageAsset: 'asset/images/kumiskucing.png',
+    imageAsset: 'assets/kumiskucing.png',
   ),
   HerbsPlant(
     nama: 'Lidah Buaya',
@@ -118,7 +121,7 @@ Asam nikotinat: 0,63-0,89 mg per 100 gram.''',
     kandungan:
         '1. Vitamin, yaitu A, B1, B2\n2. Mineral\n3. Enzim\n4. Asam Amino',
     cara: '',
-    imageAsset: 'asset/images/lidahbuaya.png',
+    imageAsset: 'assets/lidahbuaya.png',
   ),
   HerbsPlant(
       nama: 'Tomat',
@@ -132,5 +135,5 @@ Asam nikotinat: 0,63-0,89 mg per 100 gram.''',
           'Tiap 100 gram tomat mengandung kalori 20 kal, protein 1 gram, lemak 0,3 gram, karbohidrat 4,2 gram, kalsium 5 miligram, karoten (vitamin A) 1500 SI, thiamin (vitamin B) 60 mikrogram, asam Askorbat (vitamin C) 40 miligram, fosfor 27 miligram, zat besi 0,5 miligram, potassium 360 miligram.',
       cara:
           '- Tomat dibelah lalu digosokkan langsung di wajah yang berjerawat di biarkan semalam pagi hari dicuci dengan air',
-      imageAsset: 'asset/images/tomat.jpeg'),
+      imageAsset: 'assets/tomat.jpeg'),
 ];

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:herbal_plant/pages/home_page.dart';
 import 'package:herbal_plant/pages/information_page.dart';
 import 'package:herbal_plant/pages/plant_page.dart';
+import 'package:herbal_plant/theme.dart';
 
 class BottomNaviBar extends StatefulWidget {
   const BottomNaviBar({Key? key}) : super(key: key);
@@ -25,8 +26,9 @@ class _BottomNaviBarState extends State<BottomNaviBar> {
     return Scaffold(
       body: body[_currentIndex],
       bottomNavigationBar: BottomNavBar(
-        backgroundColor: const Color(0xffF8FAF8),
+        backgroundColor: kWhiteColor,
         curve: Curves.easeInQuad,
+        itemCornerRadius: 10,
         containerPadding: const EdgeInsets.all(2),
         showElevation: true,
         selectedIndex: _currentIndex,
@@ -37,23 +39,23 @@ class _BottomNaviBarState extends State<BottomNaviBar> {
           BottomNavBarItem(
             title: 'Home',
             icon: const Icon(Icons.home),
-            activeColor: const Color(0xffF8FAF8),
-            inactiveColor: const Color(0xff0C3B2E),
-            activeBackgroundColor: const Color(0xff0C3B2E),
+            activeColor: kWhiteColor,
+            inactiveColor: kGreenColor,
+            activeBackgroundColor: kGreenColor,
           ),
           BottomNavBarItem(
             title: 'Plant',
             icon: const Icon(Icons.grass),
-            activeColor: const Color(0xffF8FAF8),
-            inactiveColor: const Color(0xff0C3B2E),
-            activeBackgroundColor: const Color(0xff0C3B2E),
+            activeColor: kWhiteColor,
+            inactiveColor: kGreenColor,
+            activeBackgroundColor: kGreenColor,
           ),
           BottomNavBarItem(
             title: 'Information',
             icon: const Icon(Icons.info),
-            inactiveColor: const Color(0xff0C3B2E),
-            activeColor: const Color(0xffF8FAF8),
-            activeBackgroundColor: const Color(0xff0C3B2E),
+            activeColor: kWhiteColor,
+            inactiveColor: kGreenColor,
+            activeBackgroundColor: kGreenColor,
           ),
         ],
       ),

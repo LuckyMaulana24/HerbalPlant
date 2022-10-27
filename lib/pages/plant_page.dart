@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../model/herbs_plant.dart';
-import 'detail_page.dart';
+import 'package:herbal_plant/model/herbs_plant.dart';
+import 'package:herbal_plant/pages/detail_page.dart';
+import 'package:herbal_plant/theme.dart';
 
 class PlantPage extends StatelessWidget {
   const PlantPage({Key? key}) : super(key: key);
@@ -25,7 +25,7 @@ class PlantPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text(
-                          'Herbs Plant',
+                          '//Herbs Plant',
                           style: TextStyle(
                             decoration: TextDecoration.none,
                             fontFamily: 'Rowdies',
@@ -59,7 +59,7 @@ class PlantPage extends StatelessWidget {
                     }));
                   },
                   child: Card(
-                    color: const Color(0xff0C3B2E),
+                    color: kGreenColor,
                     elevation: 10,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -75,7 +75,6 @@ class PlantPage extends StatelessWidget {
                               left: 5,
                             ),
                             child: Container(
-                              //  height: 200,
                               margin: const EdgeInsets.all(2),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10.0),
@@ -92,11 +91,9 @@ class PlantPage extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 8.0),
                           child: Text(
                             plant.nama,
-                            style: const TextStyle(
-                              color: Color(0xffF8FAF8),
-                              fontSize: 16.0,
-                              fontFamily: "Rowdies",
-                              fontWeight: FontWeight.bold,
+                            style: whiteTextStyle.copyWith(
+                              fontSize: 16,
+                              fontWeight: bold,
                             ),
                           ),
                         ),
@@ -105,10 +102,8 @@ class PlantPage extends StatelessWidget {
                               const EdgeInsets.only(left: 8.0, bottom: 8.0),
                           child: Text(
                             plant.namalatin,
-                            style: const TextStyle(
-                              color: Color(0xffF8FAF8),
-                              fontFamily: 'Rowdies',
-                            ),
+                            style: whiteTextStyle.copyWith(
+                                fontSize: 14, fontWeight: reguler),
                           ),
                         ),
                       ],
