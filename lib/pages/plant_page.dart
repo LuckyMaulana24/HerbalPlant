@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../model/herbs_plant.dart';
-import 'detailpage.dart';
+import 'detail_page.dart';
 
 class PlantPage extends StatelessWidget {
   const PlantPage({Key? key}) : super(key: key);

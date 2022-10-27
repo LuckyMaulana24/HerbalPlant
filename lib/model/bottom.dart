@@ -1,8 +1,8 @@
 import 'package:bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:herbal_plant/pages/home_page.dart';
-import 'package:herbal_plant/pages/informationpage.dart';
-import 'package:herbal_plant/pages/plantpage.dart';
+import 'package:herbal_plant/pages/information_page.dart';
+import 'package:herbal_plant/pages/plant_page.dart';
 
 class BottomNaviBar extends StatefulWidget {
   const BottomNaviBar({Key? key}) : super(key: key);
