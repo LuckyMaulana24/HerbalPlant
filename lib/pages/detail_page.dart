@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:herbal_plant/model/herbs_plant.dart';
+import 'package:herbal_plant/theme.dart';
 
 class DetailPage extends StatefulWidget {
   final HerbsPlant plant;
@@ -14,10 +14,9 @@ class DetailPage extends StatefulWidget {
 class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    // ignore: unused_local_variable
     TabController tabController = TabController(length: 4, vsync: this);
     return Scaffold(
-      backgroundColor: const Color(0xff0C3B2E),
+      backgroundColor: kWhiteColor,
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -27,14 +26,21 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                 child: Row(
                   children: [
                     Container(
-                      color: const Color(0xffF8FAF8),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: kGreenColor,
+                        ),
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
                       child: IconButton(
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        icon: const Icon(
-                          CupertinoIcons.chevron_left,
-                          color: Color(0xff0C3B2E),
+                        icon: Icon(
+                          Icons.arrow_back,
+                          color: kGreenColor,
                         ),
                       ),
                     ),
@@ -49,12 +55,9 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                           ),
                           child: Text(
                             widget.plant.nama,
-                            style: const TextStyle(
-                              decoration: TextDecoration.none,
-                              fontFamily: 'Rowdies',
+                            style: greenTextStyle.copyWith(
                               fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xffF8FAF8),
+                              fontWeight: bold,
                             ),
                           ),
                         ),
@@ -64,12 +67,9 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                           ),
                           child: Text(
                             widget.plant.namalatin,
-                            style: const TextStyle(
-                              decoration: TextDecoration.none,
-                              fontFamily: 'Rowdies',
+                            style: greenTextStyle.copyWith(
                               fontSize: 20,
-                              fontWeight: FontWeight.w200,
-                              color: Color(0xffF8FAF8),
+                              fontWeight: medium,
                             ),
                           ),
                         ),
@@ -95,31 +95,27 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
-                  //  height: 50,
                   width: MediaQuery.of(context).size.height,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: kGreenColor,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Column(
                     children: [
-                      // ignore: prefer_const_literals_to_create_immutables
                       TabBar(
-                        labelStyle: const TextStyle(
-                          decoration: TextDecoration.none,
-                          fontFamily: 'Rowdies',
+                        labelStyle: whiteTextStyle.copyWith(
                           fontSize: 20,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: bold,
                         ),
                         isScrollable: true,
                         controller: tabController,
-                        labelColor: Colors.white,
-                        unselectedLabelColor: const Color(0xff0C3B2E),
+                        labelColor: kWhiteColor,
+                        unselectedLabelColor: kWhiteColor,
                         indicatorPadding: const EdgeInsets.all(3),
                         indicatorWeight: 1,
-                        indicatorColor: Colors.white,
+                        indicatorColor: kWhiteColor,
                         indicator: BoxDecoration(
-                          color: const Color(0xffFFBA00),
+                          color: kGreenDarkColor,
                           borderRadius: BorderRadius.circular(5),
                         ),
                         // ignore: prefer_const_literals_to_create_immutables
@@ -145,11 +141,9 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           widget.plant.deskripsi,
-                          style: const TextStyle(
-                            fontFamily: 'Rowdies',
+                          style: greenTextStyle.copyWith(
                             fontSize: 20,
-                            fontWeight: FontWeight.w200,
-                            color: Color(0xffF8FAF8),
+                            fontWeight: medium,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -158,11 +152,9 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           widget.plant.manfaat,
-                          style: const TextStyle(
-                            fontFamily: 'Rowdies',
+                          style: greenTextStyle.copyWith(
                             fontSize: 20,
-                            fontWeight: FontWeight.w200,
-                            color: Color(0xffF8FAF8),
+                            fontWeight: medium,
                           ),
                         ),
                       ),
@@ -170,11 +162,9 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           widget.plant.kandungan,
-                          style: const TextStyle(
-                            fontFamily: 'Rowdies',
+                          style: greenTextStyle.copyWith(
                             fontSize: 20,
-                            fontWeight: FontWeight.w200,
-                            color: Color(0xffF8FAF8),
+                            fontWeight: medium,
                           ),
                         ),
                       ),
@@ -182,11 +172,9 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           widget.plant.cara,
-                          style: const TextStyle(
-                            fontFamily: 'Rowdies',
+                          style: greenTextStyle.copyWith(
                             fontSize: 20,
-                            fontWeight: FontWeight.w200,
-                            color: Color(0xffF8FAF8),
+                            fontWeight: medium,
                           ),
                         ),
                       ),
