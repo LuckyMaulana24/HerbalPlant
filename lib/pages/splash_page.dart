@@ -16,7 +16,7 @@ class _SplashPageState extends State<SplashPage> {
     Timer(const Duration(seconds: 3), () {
       Navigator.pushNamedAndRemoveUntil(
         context,
-        '/navbar',
+        '/sign-in',
         ((route) => false),
       );
     });

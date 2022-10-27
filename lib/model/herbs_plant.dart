@@ -108,7 +108,8 @@ Asam nikotinat: 0,63-0,89 mg per 100 gram.''',
     manfaat:
         '1. Menyembuhkan Gangguan Ginjal dan Kandung Kemih\n2. Mengatasi Masalah Pernapasan\n3. Mengobati Peradangan dan Arthritis',
     kandungan: '1. Flavonoid\n2. Triterpenoid\n3. Fenolik',
-    cara: '',
+    cara:
+        'Siapkan daun kumis kucing sebanyak 4-5 lembar.\n Tak ketinggalan daun meniran dengan jumlah yang sama dan kedua daun harus masih dalam kondisi segar.\n Rebuslah bersama 1 gelas air putih setelah mencuci daunnya.\n Didihkan hingga tersisa separuhnya, lalu air rebusan bisa Anda konsumsi sehari 3 kali.',
     imageAsset: 'assets/kumiskucing.png',
   ),
   HerbsPlant(

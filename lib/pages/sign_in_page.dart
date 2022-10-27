@@ -1,8 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:herbal_plant/theme.dart';
 
-class SignInPage extends StatelessWidget {
+class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
+
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
+  late FToast fToast;
+  final emailController = TextEditingController(text: '');
+  final passwordController = TextEditingController(text: '');
+
+  bool isShowPasswordError = false;
+  bool isLoading = false;
+
+  @override
+  void initState() {
+    super.initState();
+    fToast = FToast();
+    fToast.init(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -84,6 +104,7 @@ class SignInPage extends StatelessWidget {
         borderRadius: BorderRadius.circular(14),
       ),
       child: TextFormField(
+        controller: emailController,
         decoration: InputDecoration.collapsed(
           hintText: 'Email',
           hintStyle: greenDarkTextStyle.copyWith(
@@ -96,44 +117,59 @@ class SignInPage extends StatelessWidget {
   }
 
   Widget passwordInput() {
-    return Container(
-      margin: const EdgeInsets.only(top: 30),
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: kGreyColor,
-        borderRadius: BorderRadius.circular(14),
-      ),
-      child: Row(
-        children: [
-          Expanded(
-            child: TextFormField(
-              obscureText: true,
-              decoration: InputDecoration.collapsed(
-                hintText: 'Password',
-                hintStyle: greenDarkTextStyle.copyWith(
-                  fontSize: 16,
-                  fontWeight: semibold,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          margin: const EdgeInsets.only(top: 30),
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: kGreyColor,
+            borderRadius: BorderRadius.circular(14),
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                child: TextFormField(
+                  controller: passwordController,
+                  obscureText: true,
+                  decoration: InputDecoration.collapsed(
+                    hintText: 'Password',
+                    hintStyle: greenDarkTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semibold,
+                    ),
+                  ),
                 ),
               ),
+              //const Icon(Icons.visibility_outlined),
+            ],
+          ),
+        ),
+        if (isShowPasswordError)
+          Container(
+            margin: const EdgeInsets.only(top: 8),
+            child: Text(
+              'the password you entered is wrong',
+              style: redTextStyle,
             ),
           ),
-          const Icon(Icons.visibility_outlined)
-        ],
-      ),
+      ],
     );
   }
 
   Widget forgotPassword() {
     return Container(
-      margin: const EdgeInsets.only(top: 20),
+      margin: const EdgeInsets.only(top: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Text(
-            'forgot password?',
-            style: greenDarkTextStyle.copyWith(
-              fontSize: 16,
-              fontWeight: semibold,
+          TextButton(
+            onPressed: () {},
+            child: Text(
+              'forgot password?',
+              style:
+                  greenDarkTextStyle.copyWith(fontSize: 16, fontWeight: bold),
             ),
           ),
         ],
@@ -147,17 +183,45 @@ class SignInPage extends StatelessWidget {
       height: 56,
       width: double.infinity,
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            isLoading = true;
+          });
+
+          Future.delayed(const Duration(seconds: 2), () {
+            setState(() {
+              isLoading = false;
+            });
+            if (passwordController.text != '12345678') {
+              setState(() {
+                isShowPasswordError = true;
+              });
+              fToast.showToast(
+                child: errorToast(),
+                toastDuration: const Duration(seconds: 2),
+                gravity: ToastGravity.BOTTOM,
+              );
+            } else {
+              Navigator.pushNamed(context, '/navbar');
+            }
+          });
+        },
         style: TextButton.styleFrom(
           backgroundColor: kGreenColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
         ),
-        child: Text(
-          'Login',
-          style: whiteTextStyle.copyWith(fontSize: 18, fontWeight: semibold),
-        ),
+        child: isLoading
+            ? CircularProgressIndicator(
+                color: kWhiteColor,
+                backgroundColor: kGreenDarkColor,
+              )
+            : Text(
+                'Login',
+                style:
+                    whiteTextStyle.copyWith(fontSize: 18, fontWeight: semibold),
+              ),
       ),
     );
   }
@@ -238,13 +302,31 @@ class SignInPage extends StatelessWidget {
             ),
           ),
           TextButton(
-              onPressed: () {},
-              child: Text(
-                'Register',
-                style:
-                    greenDarkTextStyle.copyWith(fontSize: 16, fontWeight: bold),
-              ))
+            onPressed: () {},
+            child: Text(
+              'Register',
+              style:
+                  greenDarkTextStyle.copyWith(fontSize: 16, fontWeight: bold),
+            ),
+          ),
         ],
+      ),
+    );
+  }
+
+  Widget errorToast() {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: kRedColor,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Text(
+        'wrong password',
+        style: whiteTextStyle.copyWith(
+          fontSize: 16,
+          fontWeight: semibold,
+        ),
       ),
     );
   }

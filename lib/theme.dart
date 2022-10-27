@@ -6,6 +6,7 @@ Color kGreenDarkColor = const Color(0xff244C5B);
 Color kBlackColor = const Color(0x0ff00000);
 Color kWhiteColor = const Color(0xffFBFDF9);
 Color kGreyColor = const Color(0xffE1E3DF);
+Color kRedColor = const Color(0xffBA1A1A);
 
 TextStyle greenTextStyle = GoogleFonts.nunito(
   color: kGreenColor,
@@ -21,6 +22,9 @@ TextStyle whiteTextStyle = GoogleFonts.nunito(
 );
 TextStyle greyTextStyle = GoogleFonts.nunito(
   color: kGreyColor,
+);
+TextStyle redTextStyle = GoogleFonts.nunito(
+  color: kRedColor,
 );
 
 FontWeight light = FontWeight.w300;
