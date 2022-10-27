@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:herbal_plant/pages/home_page.dart';
 import 'package:herbal_plant/pages/sign_in_page.dart';
 import 'package:herbal_plant/pages/splash_page.dart';
 
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => const SplashPage(),
-        '/sign-in': (context) =>  SignInPage(),
+        '/sign-in': (context) =>  const SignInPage(),
+        '/homepage': (context) => const HomePage(),
       },
     );
   }
